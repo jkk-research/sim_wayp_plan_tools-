@@ -103,7 +103,10 @@
         <odom_frame>gamma/odom</odom_frame>
         <robot_base_frame>gamma</robot_base_frame>
       </plugin>
-    </model>
 
+      
+
+
+    </model>
   </world>
 </sdf>
