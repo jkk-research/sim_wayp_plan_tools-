@@ -253,7 +253,7 @@
       </link>
 
        <link name="ouster_link">
-        <pose>9 0 2 0 0 0</pose>
+        <pose>5.103 0 1.339 0 0.820305 0</pose>
         <visual name="visual">
           <geometry>
             <box>
