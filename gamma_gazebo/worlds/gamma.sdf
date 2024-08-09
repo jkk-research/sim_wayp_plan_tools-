@@ -104,9 +104,6 @@
         <robot_base_frame>gamma</robot_base_frame>
       </plugin>
 
-      
-
-
     </model>
   </world>
 </sdf>

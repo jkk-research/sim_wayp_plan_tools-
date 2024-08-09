@@ -6,12 +6,12 @@
         <inertial>
           <mass>16000</mass>
           <inertia>
-            <ixx>0.51286667</ixx>
+            <ixx>3058.224</ixx>
             <ixy>0</ixy>
             <ixz>0</ixz>
-            <iyy>1.28568542</iyy>
+            <iyy>10581.777333</iyy>
             <iyz>0</iyz>
-            <izz>1.71688542</izz>
+            <izz>13427.937333</izz>
           </inertia>
         </inertial>
         <visual name='visual_chassis'>
@@ -41,14 +41,14 @@
       <link name='front_left_wheel'>
         <pose>3.9 1.0775 0 -1.570796 0 0</pose>
         <inertial>
-          <mass>1</mass>
+          <mass>90</mass>
           <inertia>
-            <ixx>1.18520833</ixx>
+            <ixx>7.4413575</ixx>
             <ixy>0</ixy>
             <ixz>0</ixz>
-            <iyy>1.18520833</iyy>
+            <iyy>7.4413575</iyy>
             <iyz>0</iyz>
-            <izz>0.78125</izz>
+            <izz>13.21938</izz>
           </inertia>
         </inertial>
         <visual name='visual_front_left_wheel'>
@@ -87,14 +87,14 @@
       <link name='front_right_wheel'>
         <pose>3.9 -1.0775 0 -1.570796 0 0</pose>
         <inertial>
-          <mass>1</mass>
+          <mass>90</mass>
           <inertia>
-            <ixx>1.18520833</ixx>
+            <ixx>7.4413575</ixx>
             <ixy>0</ixy>
             <ixz>0</ixz>
-            <iyy>1.18520833</iyy>
+            <iyy>7.4413575</iyy>
             <iyz>0</iyz>
-            <izz>0.78125</izz>
+            <izz>13.21938</izz>
           </inertia>
         </inertial>
         <visual name='visual_front_right_wheel'>
@@ -132,14 +132,14 @@
       <link name='rear_left_wheel'>
         <pose>0 1.0775 0 -1.570796 0 0</pose>
         <inertial>
-          <mass>1</mass>
+          <mass>90</mass>
           <inertia>
-            <ixx>1.18520833</ixx>
+            <ixx>7.4413575</ixx>
             <ixy>0</ixy>
             <ixz>0</ixz>
-            <iyy>1.18520833</iyy>
+            <iyy>7.4413575</iyy>
             <iyz>0</iyz>
-            <izz>0.78125</izz>
+            <izz>13.21938</izz>
           </inertia>
         </inertial>
         <visual name='visual_rear_left_wheel'>
@@ -177,14 +177,14 @@
       <link name='rear_right_wheel'>
         <pose>0 -1.0775 0 -1.570796 0 0</pose>
         <inertial>
-          <mass>1</mass>
+          <mass>90</mass>
           <inertia>
-            <ixx>1.18520833</ixx>
+            <ixx>7.4413575</ixx>
             <ixy>0</ixy>
             <ixz>0</ixz>
-            <iyy>1.18520833</iyy>
+            <iyy>7.4413575</iyy>
             <iyz>0</iyz>
-            <izz>0.78125</izz>
+            <izz>13.21938</izz>
           </inertia>
         </inertial>
         <visual name='visual_rear_right_wheel'>
@@ -394,5 +394,6 @@
         <max_acceleration>3</max_acceleration>
       </plugin>
 
+      
     </model>
 </sdf>
