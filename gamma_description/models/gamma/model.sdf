@@ -15,18 +15,12 @@
           </inertia>
         </inertial>
         <visual name='visual_chassis'>
-          <pose>0 0 0 0 0 -1.570796</pose>
+          <pose>3.8 0 -0.3 1.570796 0 -1.570796</pose>
           <geometry>
             <mesh>
-              <uri>model://meshes/Chassis.obj</uri>
+              <uri>model://meshes/Chassis_mtl.obj</uri>
             </mesh>
           </geometry>
-          <material>
-            <script>
-              <uri>file://meshes/Chassis.mtl</uri>
-              <name>Chassis</name>
-            </script>
-          </material>
         </visual>
         <collision name='collision_chassis'>
           <pose>0 0 0 0 0 0</pose>
@@ -58,12 +52,6 @@
               <uri>model://meshes/WheelM.obj</uri>
             </mesh>
           </geometry>
-          <material>
-            <script>
-              <uri>file://meshes/WheelM.mtl</uri>
-              <name>Wheel</name>
-            </script>
-          </material>
         </visual>
         <collision name='collision_front_left_wheel'>
           <geometry>
@@ -104,11 +92,6 @@
               <uri>model://meshes/Wheel.obj</uri>
             </mesh>
           </geometry>
-          <material>
-            <ambient>0.25 0.25 0.25 1</ambient>
-            <diffuse>0.4 0.4 0.4 1</diffuse>
-            <specular>0.774597 0.774597 0.774597 1</specular>
-          </material>
         </visual>
         <collision name='collision_front_right_wheel'>
           <geometry>
@@ -149,11 +132,6 @@
               <uri>model://meshes/WheelM.obj</uri>
             </mesh>
           </geometry>
-          <material>
-            <ambient>0.25 0.25 0.25 1</ambient>
-            <diffuse>0.4 0.4 0.4 1</diffuse>
-            <specular>0.774597 0.774597 0.774597 1</specular>
-          </material>
         </visual>
         <collision name='collision_rear_left_wheel'>
           <geometry>
@@ -194,11 +172,6 @@
               <uri>model://meshes/Wheel.obj</uri>
             </mesh>
           </geometry>
-          <material>
-            <ambient>0.25 0.25 0.25 1</ambient>
-            <diffuse>0.4 0.4 0.4 1</diffuse>
-            <specular>0.774597 0.774597 0.774597 1</specular>
-          </material>
         </visual>
         <collision name='collision_rear_right_wheel'>
           <geometry>
@@ -241,7 +214,7 @@
         <visual name="front_right_wheel_steering_link_visual">
           <geometry>
             <cylinder>
-              <length>1.05</length>
+              <length>0.05</length>
               <radius>0.01</radius>
             </cylinder>
           </geometry>
