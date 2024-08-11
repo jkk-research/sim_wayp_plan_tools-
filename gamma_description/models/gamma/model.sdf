@@ -4,6 +4,7 @@
       <link name='chassis'>
         <pose>0 0 0 0 0 0</pose>
         <inertial>
+          <pose>1.95 0 0 0 0 0</pose>
           <mass>16000</mass>
           <inertia>
             <ixx>3058.224</ixx>
@@ -15,7 +16,7 @@
           </inertia>
         </inertial>
         <visual name='visual_chassis'>
-          <pose>3.8 0 -0.3 1.570796 0 -1.570796</pose>
+          <pose>3.9 0 -0.542 1.570796 0 -1.570796</pose>
           <geometry>
             <mesh>
               <uri>model://meshes/Chassis_mtl.obj</uri>
@@ -23,10 +24,10 @@
           </geometry>
         </visual>
         <collision name='collision_chassis'>
-          <pose>0 0 0 0 0 0</pose>
+          <pose>1.95 0 0 0 0 0</pose>
           <geometry>
             <box>
-              <size>2.803 1.488 0.282</size>
+              <size>6 1.488 0.282</size>
             </box>
           </geometry>
         </collision>
@@ -46,10 +47,10 @@
           </inertia>
         </inertial>
         <visual name='visual_front_left_wheel'>
-          <pose>0 0 0 1.570796 0 0</pose>
+          <pose>0 0 0 0 1.570796 0</pose>
           <geometry>
             <mesh>
-              <uri>model://meshes/WheelM.obj</uri>
+              <uri>model://meshes/WheelAssemblyLeft.obj</uri>
             </mesh>
           </geometry>
         </visual>
@@ -86,10 +87,10 @@
           </inertia>
         </inertial>
         <visual name='visual_front_right_wheel'>
-          <pose>0 0 0 1.570796 0 0</pose>
+          <pose>0 0 0 0 1.570796 0</pose>
           <geometry>
             <mesh>
-              <uri>model://meshes/Wheel.obj</uri>
+              <uri>model://meshes/WheelAssemblyRight.obj</uri>
             </mesh>
           </geometry>
         </visual>
@@ -126,10 +127,10 @@
           </inertia>
         </inertial>
         <visual name='visual_rear_left_wheel'>
-          <pose>0 0 0 1.570796 0 0</pose>
+          <pose>0 0 0 0 1.570796 0</pose>
           <geometry>
             <mesh>
-              <uri>model://meshes/WheelM.obj</uri>
+              <uri>model://meshes/WheelAssemblyLeft.obj</uri>
             </mesh>
           </geometry>
         </visual>
@@ -166,10 +167,10 @@
           </inertia>
         </inertial>
         <visual name='visual_rear_right_wheel'>
-          <pose>0 0 0 1.570796 0 0</pose>
+          <pose>0 0 0 0 1.570796 0</pose>
           <geometry>
             <mesh>
-              <uri>model://meshes/Wheel.obj</uri>
+              <uri>model://meshes/WheelAssemblyRight.obj</uri>
             </mesh>
           </geometry>
         </visual>
@@ -193,9 +194,8 @@
       </link>
 
       <link name="front_left_wheel_steering_link">
-        <pose>3.9 1.0775 0 0 0 0</pose>
+        <pose>3.9 1.0775 3.141596 0 0 0</pose>
         <visual name="front_left_wheel_steering_link_visual">
-          <pose>0 0 0 0 0 0</pose>
           <geometry>
             <cylinder>
               <length>0.05</length>
@@ -269,15 +269,15 @@
       </joint>
 
       <joint name="front_left_wheel_steering_joint" type="revolute">
-        <child>front_left_wheel_steering_link</child>
         <parent>chassis</parent>
+        <child>front_left_wheel_steering_link</child>
         <axis>
           <xyz>0 0 1</xyz>
           <limit>
-            <lower>-0.6</lower>
-            <upper>+0.6</upper>
-            <velocity>1.0</velocity>
-            <effort>25</effort>
+            <lower>-1.5</lower>
+            <upper>+1.5</upper>
+            <velocity>3.0</velocity>
+            <effort>100</effort>
           </limit>
           <use_parent_model_frame>1</use_parent_model_frame>
         </axis>
@@ -289,11 +289,12 @@
         <axis>
           <xyz>0 0 1</xyz>
           <limit>
-            <lower>-0.6</lower>
-            <upper>+0.6</upper>
-            <velocity>1.0</velocity>
-            <effort>25</effort>
+            <lower>-1.5</lower>
+            <upper>+1.5</upper>
+            <velocity>3.0</velocity>
+            <effort>100</effort>
           </limit>
+          <use_parent_model_frame>1</use_parent_model_frame>
         </axis>
       </joint>
 
@@ -366,7 +367,5 @@
         <min_acceleration>-6</min_acceleration>
         <max_acceleration>3</max_acceleration>
       </plugin>
-
-      
     </model>
 </sdf>
