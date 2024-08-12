@@ -82,11 +82,19 @@ def generate_launch_description():
         output='screen'
     )
 
+    steering_velocity = Node(
+        package='joint_attribute_publisher',
+        executable='echo_two_joint_attributes',
+        name='joint_attribute_publisher',
+        output='screen'
+    )
+
     return LaunchDescription([
         gz_sim,
         DeclareLaunchArgument('rviz', default_value='true',
                               description='Open RViz.'),
         bridge,
         robot_state_publisher,
+        steering_velocity,
         rviz
     ])
