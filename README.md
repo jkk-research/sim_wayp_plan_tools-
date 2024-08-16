@@ -88,7 +88,10 @@ ros2 topic pub /gamma/cmd_vel geometry_msgs/msg/Twist "{linear: {x: 1.0, y: 0.0,
     - topic name: /gamma/odometry
     - topic type: nav_msgs/msg/Odometry
 
-## Repository strucutre
+## Repository structure
 
-- gamma_application 
+- ```gamma_application``` - ROS 2 specific code and configurations.
+- ```gamma_bringup``` - launch files and communication utilities between ROS 2 and Gazebo. Also contains vehicle/hardware-specific configurations. 
+- ```gamma_description``` - Gazebo-specific code and configurations. Contains worlds and custom plugins.
+- ```joint_attribute_publisher``` - ROS 2 package for publishing velocity and steering angle based on Gazebo joint attributes. (note: Going to be moved to ```gamma_application``` later).
 
