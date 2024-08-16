@@ -1,6 +1,11 @@
 <?xml version="1.0" ?>
 <sdf version="1.8">
     <model name='gamma'>
+
+      <link name='base_link'>
+        <pose>0 0 0 0 0 0</pose>
+      </link>
+
       <link name='chassis'>
         <pose>0 0 0 0 0 0</pose>
         <inertial>
@@ -24,7 +29,7 @@
           </geometry>
         </visual>
         <collision name='collision_chassis'>
-          <pose>1.95 0 0 0 0 0</pose>
+          <pose>1.95 0 1.5 0 0 0</pose>
           <geometry>
             <box>
               <size>6 1.488 0.282</size>
@@ -194,7 +199,7 @@
       </link>
 
       <link name="front_left_wheel_steering_link">
-        <pose>3.9 1.0775 3.141596 0 0 0</pose>
+        <pose>3.9 1.0775 0 0 0 0</pose>
         <visual name="front_left_wheel_steering_link_visual">
           <geometry>
             <cylinder>
@@ -263,19 +268,24 @@
         </sensor>
       </link>
 
+      <joint name="chassis_joint" type="fixed">
+        <parent>base_link</parent>
+        <child>chassis</child>
+      </joint>
+
       <joint name="ouster_joint" type="fixed">
-        <parent>chassis</parent>
+        <parent>base_link</parent>
         <child>ouster_link</child>
       </joint>
 
       <joint name="front_left_wheel_steering_joint" type="revolute">
-        <parent>chassis</parent>
+        <parent>base_link</parent>
         <child>front_left_wheel_steering_link</child>
         <axis>
           <xyz>0 0 1</xyz>
           <limit>
-            <lower>-1.5</lower>
-            <upper>+1.5</upper>
+            <lower>-0.5</lower>
+            <upper>+0.5</upper>
             <velocity>3.0</velocity>
             <effort>100</effort>
           </limit>
@@ -284,13 +294,13 @@
       </joint>
 
       <joint name="front_right_wheel_steering_joint" type="revolute">
-        <parent>chassis</parent>
+        <parent>base_link</parent>
         <child>front_right_wheel_steering_link</child>
         <axis>
           <xyz>0 0 1</xyz>
           <limit>
-            <lower>-1.5</lower>
-            <upper>+1.5</upper>
+            <lower>-0.5</lower>
+            <upper>+0.5</upper>
             <velocity>3.0</velocity>
             <effort>100</effort>
           </limit>
@@ -323,7 +333,7 @@
       </joint>
 
       <joint name='rear_left_wheel_joint' type='revolute'>
-        <parent>chassis</parent>
+        <parent>base_link</parent>
         <child>rear_left_wheel</child>
         <axis>
           <xyz>0 0 1</xyz>
@@ -335,7 +345,7 @@
       </joint>
 
       <joint name='rear_right_wheel_joint' type='revolute'>
-        <parent>chassis</parent>
+        <parent>base_link</parent>
         <child>rear_right_wheel</child>
         <axis>
           <xyz>0 0 1</xyz>
