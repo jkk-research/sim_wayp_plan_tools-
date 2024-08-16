@@ -76,7 +76,7 @@ A setup should appear similar to the one presented below:
 ros2 topic pub /gamma/cmd_vel geometry_msgs/msg/Twist "{linear: {x: 1.0, y: 0.0, z: 0.0}, angular: {x: 0.0, y: 0.0, z: 0.2}}"
 ```
 
-2. Vehicle proprioceptive infomration
+2. Vehicle proprioceptive information
 
 - Velocity
     - topic name: /gamma/velocity
@@ -87,6 +87,15 @@ ros2 topic pub /gamma/cmd_vel geometry_msgs/msg/Twist "{linear: {x: 1.0, y: 0.0,
 - Odometry
     - topic name: /gamma/odometry
     - topic type: nav_msgs/msg/Odometry
+    - frame: gamma/odom
+
+3. Exteroceptive sensors
+
+    - Lidar
+        - topic name: /gamma/points
+        - topic type: sensor_msgs/msg/PointCloud2
+        - frame: gamma/ouster_link/gpu_lidar
+
 
 ## Repository structure
 
