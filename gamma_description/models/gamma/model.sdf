@@ -24,7 +24,7 @@
           <pose>3.9 0 -0.542 1.570796 0 -1.570796</pose>
           <geometry>
             <mesh>
-              <uri>model://meshes/Chassis_mtl.obj</uri>
+              <uri>package://gamma_description/models/gamma/meshes/Chassis_mtl.obj</uri>
             </mesh>
           </geometry>
         </visual>
@@ -55,7 +55,7 @@
           <pose>0 0 0 0 1.570796 0</pose>
           <geometry>
             <mesh>
-              <uri>model://meshes/WheelAssemblyLeft.obj</uri>
+              <uri>package://gamma_description/models/gamma/meshes/WheelAssemblyLeft.obj</uri>
             </mesh>
           </geometry>
         </visual>
@@ -95,7 +95,7 @@
           <pose>0 0 0 0 1.570796 0</pose>
           <geometry>
             <mesh>
-              <uri>model://meshes/WheelAssemblyRight.obj</uri>
+              <uri>package://gamma_description/models/gamma/meshes/WheelAssemblyRight.obj</uri>
             </mesh>
           </geometry>
         </visual>
@@ -135,7 +135,7 @@
           <pose>0 0 0 0 1.570796 0</pose>
           <geometry>
             <mesh>
-              <uri>model://meshes/WheelAssemblyLeft.obj</uri>
+              <uri>package://gamma_description/models/gamma/meshes/WheelAssemblyLeft.obj</uri>
             </mesh>
           </geometry>
         </visual>
@@ -175,7 +175,7 @@
           <pose>0 0 0 0 1.570796 0</pose>
           <geometry>
             <mesh>
-              <uri>model://meshes/WheelAssemblyRight.obj</uri>
+              <uri>package://gamma_description/models/gamma/meshes/WheelAssemblyRight.obj</uri>
             </mesh>
           </geometry>
         </visual>
