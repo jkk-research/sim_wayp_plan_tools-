@@ -15,14 +15,14 @@
  *
 */
 
-#ifndef GAMMA_GAZEBO__BASIC_SYSTEM_HH_
-#define GAMMA_GAZEBO__BASIC_SYSTEM_HH_
+#ifndef GAMMASIM_GAZEBO__BASIC_SYSTEM_HH_
+#define GAMMASIM_GAZEBO__BASIC_SYSTEM_HH_
 
 // The only required include in the header is this one.
 // All others will depend on what your plugin does.
 #include <gz/sim/System.hh>
 
-namespace gamma_gazebo
+namespace gammasim_gazebo
 {
   // This is the main plugin's class. It must inherit from System and at least
   // one other interface.

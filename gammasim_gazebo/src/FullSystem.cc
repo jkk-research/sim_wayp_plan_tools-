@@ -25,20 +25,20 @@
 #include <gz/plugin/Register.hh>
 
 // Don't forget to include the plugin's header.
-#include "gamma_gazebo/FullSystem.hh"
+#include "gammasim_gazebo/FullSystem.hh"
 
 // This is required to register the plugin. Make sure the interfaces match
 // what's in the header.
 IGNITION_ADD_PLUGIN(
-    gamma_gazebo::FullSystem,
+    gammasim_gazebo::FullSystem,
     gz::sim::System,
-    gamma_gazebo::FullSystem::ISystemConfigure,
-    gamma_gazebo::FullSystem::ISystemPreUpdate,
-    gamma_gazebo::FullSystem::ISystemUpdate,
-    gamma_gazebo::FullSystem::ISystemPostUpdate
+    gammasim_gazebo::FullSystem::ISystemConfigure,
+    gammasim_gazebo::FullSystem::ISystemPreUpdate,
+    gammasim_gazebo::FullSystem::ISystemUpdate,
+    gammasim_gazebo::FullSystem::ISystemPostUpdate
 )
 
-namespace gamma_gazebo 
+namespace gammasim_gazebo 
 {
 
 void FullSystem::Configure(const gz::sim::Entity &_entity,
@@ -46,7 +46,7 @@ void FullSystem::Configure(const gz::sim::Entity &_entity,
                 gz::sim::EntityComponentManager &_ecm,
                 gz::sim::EventManager &_eventManager)
 {
-  igndbg << "gamma_gazebo::FullSystem::Configure on entity: " << _entity << std::endl;
+  igndbg << "gammasim_gazebo::FullSystem::Configure on entity: " << _entity << std::endl;
 }
 
 void FullSystem::PreUpdate(const gz::sim::UpdateInfo &_info,
@@ -54,7 +54,7 @@ void FullSystem::PreUpdate(const gz::sim::UpdateInfo &_info,
 {
   if (!_info.paused && _info.iterations % 1000 == 0)
   {
-    igndbg << "gamma_gazebo::FullSystem::PreUpdate" << std::endl;
+    igndbg << "gammasim_gazebo::FullSystem::PreUpdate" << std::endl;
   }
 }
 
@@ -63,7 +63,7 @@ void FullSystem::Update(const gz::sim::UpdateInfo &_info,
 {
   if (!_info.paused && _info.iterations % 1000 == 0)
   {
-    igndbg << "gamma_gazebo::FullSystem::Update" << std::endl;
+    igndbg << "gammasim_gazebo::FullSystem::Update" << std::endl;
   }
 }
 
@@ -72,7 +72,7 @@ void FullSystem::PostUpdate(const gz::sim::UpdateInfo &_info,
 {
   if (!_info.paused && _info.iterations % 1000 == 0)
   {
-    igndbg << "gamma_gazebo::FullSystem::PostUpdate" << std::endl;
+    igndbg << "gammasim_gazebo::FullSystem::PostUpdate" << std::endl;
   }
 }
 

@@ -28,11 +28,11 @@
     </plugin>
     <plugin
       filename="BasicSystem"
-      name="gamma_gazebo::BasicSystem">
+      name="gammasim_gazebo::BasicSystem">
     </plugin>
     <plugin
       filename="FullSystem"
-      name="gamma_gazebo::FullSystem">
+      name="gammasim_gazebo::FullSystem">
     </plugin>
 
     <light name="sun" type="directional">
@@ -56,7 +56,7 @@
           <geometry>
             <plane>
               <normal>0 0 1</normal>
-              <size>500 500</size>
+              <size>2000 2000</size>
             </plane>
           </geometry>
         </collision>

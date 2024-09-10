@@ -25,16 +25,16 @@
 #include <gz/plugin/Register.hh>
 
 // Don't forget to include the plugin's header.
-#include "gamma_gazebo/BasicSystem.hh"
+#include "gammasim_gazebo/BasicSystem.hh"
 
 // This is required to register the plugin. Make sure the interfaces match
 // what's in the header.
 IGNITION_ADD_PLUGIN(
-    gamma_gazebo::BasicSystem,
+    gammasim_gazebo::BasicSystem,
     gz::sim::System,
-    gamma_gazebo::BasicSystem::ISystemPostUpdate)
+    gammasim_gazebo::BasicSystem::ISystemPostUpdate)
 
-namespace gamma_gazebo 
+namespace gammasim_gazebo 
 {
 
 void BasicSystem::PostUpdate(const gz::sim::UpdateInfo &_info,
@@ -42,7 +42,7 @@ void BasicSystem::PostUpdate(const gz::sim::UpdateInfo &_info,
 {
   if (!_info.paused && _info.iterations % 1000 == 0)
   {
-    igndbg << "gamma_gazebo::BasicSystem::PostUpdate" << std::endl;
+    igndbg << "gammasim_gazebo::BasicSystem::PostUpdate" << std::endl;
   }
 }
 

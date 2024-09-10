@@ -1,10 +1,10 @@
 cmake_minimum_required(VERSION 3.5)
 
-project(gamma_bringup)
+project(gammasim_bringup)
 
 find_package(ament_cmake REQUIRED)
-find_package(gamma_description REQUIRED)
-find_package(gamma_gazebo REQUIRED)
+find_package(gammasim_description REQUIRED)
+find_package(gammasim_gazebo REQUIRED)
 
 # Install project launch files
 install(
