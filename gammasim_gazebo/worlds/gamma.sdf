@@ -80,7 +80,7 @@
       <self_collide>true</self_collide>
       <pose>0 0 0.8 0 0 0</pose>
       <include merge="true">
-        <uri>package://gamma_description/models/gamma</uri>
+        <uri>package://gammasim_description/models/gamma</uri>
       </include>
 
       <plugin
