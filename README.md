@@ -45,7 +45,9 @@ rosdep install --from-paths src --ignore-src -r -i -y --rosdistro humble
 
 ```
 
-4. Source the workspace, or add sourcing it to ```bashrc```.
+4. Build the packages in your workspace.
+
+5. Source the workspace, or add sourcing it to ```bashrc```.
 
 ```
 source ~/gammasim_ws/install/setup.bash
@@ -56,7 +58,7 @@ source ~/gammasim_ws/install/setup.bash
 ### Launching the simulator
 
 ```
-ros2 launch gamma_bringup gamma.launch.py
+ros2 launch gammasim_bringup gamma.launch.py
 ```
 
 A setup should appear similar to the one presented below:
@@ -94,13 +96,13 @@ ros2 topic pub /gamma/cmd_vel geometry_msgs/msg/Twist "{linear: {x: 1.0, y: 0.0,
     - Lidar
         - topic name: /gamma/points
         - topic type: sensor_msgs/msg/PointCloud2
-        - frame: gamma/ouster_link/gpu_lidar
+        - frame: gamma/ouster_link/ouster
 
 
 ## Repository structure
 
-- ```gamma_application``` - ROS 2 specific code and configurations.
-- ```gamma_bringup``` - launch files and communication utilities between ROS 2 and Gazebo. Also contains vehicle/hardware-specific configurations. 
-- ```gamma_description``` - Gazebo-specific code and configurations. Contains worlds and custom plugins.
-- ```joint_attribute_publisher``` - ROS 2 package for publishing velocity and steering angle based on Gazebo joint attributes. (note: Going to be moved to ```gamma_application``` later).
+- ```gammasim_application``` - ROS 2 specific code and configurations.
+- ```gammasim_bringup``` - launch files and communication utilities between ROS 2 and Gazebo. Also contains vehicle/hardware-specific configurations. 
+- ```gammasim_description``` - Gazebo-specific code and configurations. Contains worlds and custom plugins.
+- ```joint_attribute_publisher``` - ROS 2 package for publishing velocity and steering angle based on Gazebo joint attributes. (note: Going to be moved to ```gammasim_application``` later).
 

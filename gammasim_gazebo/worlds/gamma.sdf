@@ -100,8 +100,8 @@
       <plugin
         filename="ignition-gazebo-odometry-publisher-system"
         name="ignition::gazebo::systems::OdometryPublisher">
-        <odom_frame>gamma/odom</odom_frame>
-        <robot_base_frame>gamma</robot_base_frame>
+        <odom_frame>map_gamma</odom_frame>
+        <robot_base_frame>base_link</robot_base_frame>
       </plugin>
 
     </model>
