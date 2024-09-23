@@ -19,16 +19,16 @@ export IGN_VERSION=fortress
 
 ### Installation steps
 
-1. Create a workspace and go to the ```src``` directory. Alternatively, an already existing workspace can be used as well.
+1. Create a workspace and go to the `src` directory. Alternatively, an already existing workspace can be used as well.
 
-```
+```bash
 mkdir -p ~/gammasim_ws/src
 cd ~/gammasim_ws/src
 ```
 
 2. Clone the repository and select the ```gamma``` branch.
 
-```
+```bash
 git clone https://github.com/jkk-research/sim_wayp_plan_tools.git
 cd sim_wayp_plan_tools
 git checkout gamma
@@ -36,7 +36,7 @@ git checkout gamma
 
 3. Install dependencies
 
-```
+```bash
 cd ~/gammasim_ws
 source /opt/ros/humble/setup.bash
 sudo rosdep init
@@ -47,9 +47,13 @@ rosdep install --from-paths src --ignore-src -r -i -y --rosdistro humble
 
 4. Build the packages in your workspace.
 
-5. Source the workspace, or add sourcing it to ```bashrc```.
-
+```bash
+colcon build --symlink-install --packages-select gammasim_application gammasim_bringup gammasim_description gammasim_gazebo joint_attribute_publisher
 ```
+
+6. Source the workspace, or add sourcing it to ```bashrc```.
+
+```bash
 source ~/gammasim_ws/install/setup.bash
 ```
 
@@ -81,15 +85,15 @@ ros2 topic pub /gamma/cmd_vel geometry_msgs/msg/Twist "{linear: {x: 1.0, y: 0.0,
 2. Vehicle proprioceptive information
 
 - Velocity
-    - topic name: /gamma/velocity
-    - topic type: std_msgs/msg/Float64
+    - topic name: `/gamma/velocity`
+    - topic type: `std_msgs/msg/Float64`
 - Steering angle
-    - topic name: /gamma/position (note: Not the most intuitive name, it originates from the original Gazebo joint. It is to be changed.)
-    - topic type: std_msgs/msg/Float64
+    - topic name: `/gamma/position` (note: Not the most intuitive name, it originates from the original Gazebo joint. It is to be changed.)
+    - topic type: `std_msgs/msg/Float64`
 - Odometry
-    - topic name: /gamma/odometry
-    - topic type: nav_msgs/msg/Odometry
-    - frame: gamma/odom
+    - topic name: `/gamma/odometry`
+    - topic type: `nav_msgs/msg/Odometry`
+    - frame: `map_gamma`
 
 3. Exteroceptive sensors
 
@@ -105,4 +109,14 @@ ros2 topic pub /gamma/cmd_vel geometry_msgs/msg/Twist "{linear: {x: 1.0, y: 0.0,
 - ```gammasim_bringup``` - launch files and communication utilities between ROS 2 and Gazebo. Also contains vehicle/hardware-specific configurations. 
 - ```gammasim_description``` - Gazebo-specific code and configurations. Contains worlds and custom plugins.
 - ```joint_attribute_publisher``` - ROS 2 package for publishing velocity and steering angle based on Gazebo joint attributes. (note: Going to be moved to ```gammasim_application``` later).
+
+## Troubleshoot
+
+> [!NOTE]  
+> If your build produces a similare error: `SetuptoolsDeprecationWarning: setup.py install is deprecated`, please downgrage the `setuptools` to `58.2.0`.
+> So, the current workaround is: `pip install setuptools==58.2.0`.
+
+Read more [about the issue](https://answers.ros.org/question/396439/setuptoolsdeprecationwarning-setuppy-install-is-deprecated-use-build-and-pip-and-other-standards-based-tools/?answer=400052#post-id-400052).
+
+
 
